@@ -1,5 +1,6 @@
 {
   "name": "Customer Managment",
+  "active": true,
   "version": "0.1",
   "priority": "980",
   "baseperm": "2",
