@@ -5,6 +5,7 @@
   "priority": "980",
   "baseperm": "2",
   "basepath": "customermanagment/",
+  "languagefiles": "languages/",
   "authors": [
     {
       "name": "Bennet Gallein",

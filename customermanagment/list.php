@@ -119,16 +119,16 @@ $results = $Paginator->getData($limit, $page);
 
         <div class="card">
             <div class="card-header" data-background-color="<?= $db->getConfig()['color'] ?>">
-                <h4 class="title">User Overwiew</h4>
-                <p class="category">These are all the users currently registered in the System</p>
+                <h4 class="title"><?= $module->getMessage("list_cardheader")?></h4>
+                <p class="category"><?= $module->getMessage("list_carddesc") ?></p>
             </div>
             <div class="card-content">
                 <form action="module.php?module=customermanagment/list.php&params=method|search" method="post">
                     <div class="col-md-4">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search User"name="userid">
+                            <input type="text" class="form-control" placeholder="<?= $module->getMessage("list_search_field") ?>"name="userid">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit" style="border-radius: 5px;">Go!</button>
+                                <button class="btn btn-default" type="submit" style="border-radius: 5px;"><?= $module->getMessage("list_search_submit") ?></button>
                             </span>
                         </div>
                     </div>
@@ -137,13 +137,13 @@ $results = $Paginator->getData($limit, $page);
                     <table class="table">
                         <thead class="text-primary">
                         <tr>
-                            <th>_id</th>
-                            <th>id</th>
-                            <th>email</th>
-                            <th>permissions</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>registered_at</th>
+                            <th><?= $module->getMessage("list_id") ?></th>
+                            <th><?= $module->getMessage("list_realid") ?></th>
+                            <th><?= $module->getMessage("list_email") ?></th>
+                            <th><?= $module->getMessage("list_permission") ?></th>
+                            <th><?= $module->getMessage("list_firstname") ?></th>
+                            <th><?= $module->getMessage("list_lastname") ?></th>
+                            <th><?= $module->getMessage("list_registerdate") ?></th>
                         </tr>
                         </thead>
                         <tbody>

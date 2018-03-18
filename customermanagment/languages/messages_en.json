@@ -1,0 +1,13 @@
+{
+    "list_cardheader": "User Overview",
+    "list_carddesc": "These are all the users currently registered in the System",
+    "list_search_field": "Search User",
+    "list_search_submit": "Go!",
+    "list_id": "id",
+    "list_realid": "Number",
+    "list_email": "email",
+    "list_permission": "permission",
+    "list_firstname": "First name",
+    "list_lastname": "Last name",
+    "list_registerdate": "Registered at"
+}
