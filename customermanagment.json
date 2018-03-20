@@ -6,6 +6,7 @@
   "baseperm": "2",
   "basepath": "customermanagment/",
   "languagefiles": "languages/",
+  "language": "en",
   "authors": [
     {
       "name": "Bennet Gallein",
@@ -19,7 +20,7 @@
   "navs": [
     {
       "icon": "supervisor_account",
-      "name": "Customer listing",
+      "name": "__LIST_CUSTOMER_LISTING",
       "link": "list.php",
       "_comment": "available permissions are: user = 1, supporter = 2, admin = 3; incrementing perms include lower ones!",
       "permission": "2",
