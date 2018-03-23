@@ -1,5 +1,5 @@
 {
-  "name": "Customer Managment",
+  "name": "Customer",
   "active": true,
   "version": "0.1",
   "priority": "980",
@@ -19,7 +19,7 @@
   ],
   "navs": [
     {
-      "icon": "supervisor_account",
+      "icon": "format-list-bulleted",
       "name": "__LIST_CUSTOMER_LISTING",
       "link": "list.php",
       "_comment": "available permissions are: user = 1, supporter = 2, admin = 3; incrementing perms include lower ones!",
