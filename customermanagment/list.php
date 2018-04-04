@@ -114,16 +114,12 @@ $db->connect();
 $Paginator = new Paginator($db->getConnection(), $query);
 $results = $Paginator->getData($limit, $page);
 ?>
-<div class="row">
-    <div class="col-md-12">
+<div class="inner">
+    <div class="row col-md-10 offset-md-1 mt-3">
 
-        <div class="card">
-            <div class="card-header" data-background-color="<?= $db->getConfig()['color'] ?>">
-                <h4 class="title"><?= $module->getMessage("list_cardheader")?></h4>
-                <p class="category"><?= $module->getMessage("list_carddesc") ?></p>
-            </div>
-            <div class="card-content">
-                <form action="module.php?module=customermanagment/list.php&params=method|search" method="post">
+        <div class="card col-md-12 bg-light">
+            <div class="card-body text-center">
+                <!--<form action="module.php?module=customermanagment/list.php&params=method|search" method="post">
                     <div class="col-md-4">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="<?= $module->getMessage("list_search_field") ?>"name="userid">
@@ -132,8 +128,7 @@ $results = $Paginator->getData($limit, $page);
                             </span>
                         </div>
                     </div>
-                </form>
-                <div class="table-responsive">
+                </form>-->
                     <table class="table">
                         <thead class="text-primary">
                         <tr>
@@ -164,7 +159,6 @@ $results = $Paginator->getData($limit, $page);
                         <?php endfor; ?>
                         </tbody>
                     </table>
-                </div>
                 <div style="width: 50%; margin-left: 25%; text-align: center">
                     <?php echo $Paginator->createLinks($links, 'pagination pagination-sm'); ?>
                 </div>
