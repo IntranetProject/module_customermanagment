@@ -1,12 +1,7 @@
-<div class="col-lg-3 col-md-6 col-sm-6">
-    <div class="card card-stats">
-        <a href="module.php?module=customermanagment/list.php">
-            <div class="card-header" data-background-color="grey">
-                <i class="mdi mdi-account-circle mdi-24px"></i>
-            </div>
-        </a>
-        <div class="card-content">
-            <p class="category">Customers</p>
+<div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+    <div class="card card-stats bg-light">
+        <div class="card-body">
+            <p class="category card-title">Customers</p>
             <?php
             $res = $db->simpleQuery("SELECT id FROM users");
             $accounts = $res->num_rows;
@@ -15,20 +10,15 @@
         </div>
         <div class="card-footer">
             <div class="stats">
-                <i class="mdi mdi-calendar-range"></i> Overall
+                <a href="module.php?module=customermanagment/list.php"><i class="mdi mdi-calendar-range"></i> Overall</a>
             </div>
         </div>
     </div>
 </div>
-<div class="col-lg-3 col-md-6 col-sm-6">
-    <div class="card card-stats">
-        <a href="module.php?module=customermanagment/list.php">
-            <div class="card-header" data-background-color="red">
-                <i class="mdi mdi-account-circle mdi-24px"></i>
-            </div>
-        </a>
-        <div class="card-content">
-            <p class="category">Customers</p>
+<div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+    <div class="card card-stats bg-light">
+        <div class="card-body">
+            <p class="category card-title">Customers</p>
             <?php
             $res = $db->simpleQuery("SELECT id FROM users WHERE registered_at >= now() - INTERVAL 30 DAY");
             $accounts = $res->num_rows;
@@ -37,20 +27,15 @@
         </div>
         <div class="card-footer">
             <div class="stats">
-                <i class="mdi mdi-calendar-range"></i> last 30 Days
+                <a href="module.php?module=customermanagment/list.php" ><i class="mdi mdi-calendar-range"></i> last 30 Days</a>
             </div>
         </div>
     </div>
 </div>
-<div class="col-lg-3 col-md-6 col-sm-6">
-    <div class="card card-stats">
-        <a href="module.php?module=customermanagment/list.php">
-            <div class="card-header" data-background-color="orange">
-                <i class="mdi mdi-account-circle mdi-24px"></i>
-            </div>
-        </a>
-        <div class="card-content">
-            <p class="category">Customers</p>
+<div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+    <div class="card card-stats bg-light">
+        <div class="card-body">
+            <p class="category card-title">Customers</p>
             <?php
             $res = $db->simpleQuery("SELECT id FROM users WHERE registered_at >= now() - INTERVAL 7 DAY");
             $accounts = $res->num_rows;
@@ -59,20 +44,15 @@
         </div>
         <div class="card-footer">
             <div class="stats">
-                <i class="mdi mdi-calendar-range"></i> last 7 Days
+                <a href="module.php?module=customermanagment/list.php"><i class="mdi mdi-calendar-range"></i> last 7 Days</a>
             </div>
         </div>
     </div>
 </div>
-<!--<div class="col-lg-3 col-md-6 col-sm-6">
-        <div class="card card-stats">
-            <a href="module.php?module=customermanagment/list.php">
-                <div class="card-header" data-background-color="green">
-                    <i class="mdi mdi-account-circle mdi-24px"></i>
-                </div>
-            </a>
-            <div class="card-content">
-                <p class="category">Customers</p>
+<div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+        <div class="card card-stats bg-light">
+            <div class="card-body">
+                <p class="category card-title">Customers</p>
                 <?php
 $res = $db->simpleQuery("SELECT id FROM users WHERE registered_at >= now() - INTERVAL 1 DAY");
 $accounts = $res->num_rows;
@@ -81,8 +61,8 @@ $accounts = $res->num_rows;
             </div>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="mdi mdi-calendar-range"></i> last Day
+                    <a href="module.php?module=customermanagment/list.php"><i class="mdi mdi-calendar-range"></i> last Day</a>
                 </div>
             </div>
         </div>
-    </div>-->
+    </div>
