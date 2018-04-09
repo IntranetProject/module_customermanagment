@@ -114,10 +114,18 @@ $db->connect();
 $Paginator = new Paginator($db->getConnection(), $query);
 $results = $Paginator->getData($limit, $page);
 ?>
+<style>
+    .d-inline * {
+        width: calc(100% / 3);
+        float: left;
+        text-align: center !important;
+        margin-left: 25%;
+    }
+</style>
 <div class="inner">
-    <div class="row col-md-10 offset-md-1 mt-3">
+    <div class="row col-md-10 offset-md-1 mt-3 bg-light">
 
-        <div class="card col-md-12 bg-light">
+        <div class="card col-md-12 bg-light mt-3">
             <div class="card-body text-center">
                 <!--<form action="module.php?module=customermanagment/list.php&params=method|search" method="post">
                     <div class="col-md-4">
@@ -139,6 +147,7 @@ $results = $Paginator->getData($limit, $page);
                             <th><?= $module->getMessage("list_firstname") ?></th>
                             <th><?= $module->getMessage("list_lastname") ?></th>
                             <th><?= $module->getMessage("list_registerdate") ?></th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -153,14 +162,14 @@ $results = $Paginator->getData($limit, $page);
                                 <td><?= $results->data[$i]['registered_at'] ?></td>
                                 <td>
                                     <a href="module.php?module=customermanagment/profile.php&params=user|<?= $results->data[$i]['id'] ?>"><i
-                                                class="material-icons">account_box</i></a>
+                                                class="mdi mdi-account-box mdi-24px"></i></a>
                                 </td>
                             </tr>
                         <?php endfor; ?>
                         </tbody>
                     </table>
-                <div style="width: 50%; margin-left: 25%; text-align: center">
-                    <?php echo $Paginator->createLinks($links, 'pagination pagination-sm'); ?>
+                <div class="col-md-2 offset-md-5" style="text-align: center;">
+                    <?php echo $Paginator->createLinks($links, 'pagination pagination-sm text-center d-inline'); ?>
                 </div>
             </div>
         </div>
