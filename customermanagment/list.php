@@ -115,11 +115,11 @@ $Paginator = new Paginator($db->getConnection(), $query);
 $results = $Paginator->getData($limit, $page);
 ?>
 <style>
-    .d-inline * {
+    .pagination  {
+        width: 100%;
+    }
+    .pagination * {
         width: calc(100% / 3);
-        float: left;
-        text-align: center !important;
-        margin-left: 25%;
     }
 </style>
 <div class="inner">
@@ -169,7 +169,7 @@ $results = $Paginator->getData($limit, $page);
                         </tbody>
                     </table>
                 <div class="col-md-2 offset-md-5" style="text-align: center;">
-                    <?php echo $Paginator->createLinks($links, 'pagination pagination-sm text-center d-inline'); ?>
+                    <?php echo $Paginator->createLinks($links, 'pagination pagination-sm text-center'); ?>
                 </div>
             </div>
         </div>
